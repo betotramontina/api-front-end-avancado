@@ -19,8 +19,7 @@ Com a Agenda Aniversariantes você tem uma forma segura e não invasiva de guard
 #### Atualizar os pacotes do Ubuntu no WSL
 $ sudo apt update
 $ sudo apt upgrade -y
-#### Instalar o curl (se ainda não tiver)
-$ sudo apt install curl -y
+#### Instalar o curl (se ainda não tiver) $ sudo apt install curl -y
 #### Instalar o NVM (Node Version Manager) no WSL
 $ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh
 #### Recarregar o ambiente do shell no WSL
