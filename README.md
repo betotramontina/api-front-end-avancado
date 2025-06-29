@@ -1,89 +1,38 @@
+MVP API FRONT END AVANÇADO
+Estudante: ROBERTO TRAMONTINA ARAUJO
+Matrícula: 4052024001752
+Curso: DESENVOLVIMENTO FULL STACK
+Disciplina: Sprint: Desenvolvimento Front-end Avançado (40530010059_20250_01)
 
-Conectar wsl ubuntu
-open integrated terminal
-$ python3 -m venv venv_api
-$ source venv_api/bin/activate
-Passo 1: Abrir um novo terminal no VS Code conectado ao WSL
+Título: Agenda Aniversariantes
+Essa é uma alternativa para você, que assim como eu, não tem Facebook, Instagram ou qualquer outra mídia social e por isso perdeu a sua agenda de aniversários.
+Com a Agenda Aniversariantes você tem uma forma segura e não invasiva de guardar essas datas e contatos especiais, sem a obrigação de se cadastrar em qualquer site.
 
-Se você tiver um terminal em execução no VS Code que não seja o WSL, feche-o.
-
-Abra um novo terminal no VS Code: Terminal > New Terminal ou Ctrl+Shift+ (backtick).
-
-Verifique: No cabeçalho do terminal, ele deve indicar algo como bash (WSL) ou zsh (WSL). No rodapé do VS Code, o indicador verde deve mostrar WSL: Ubuntu. Isso confirma que você está no ambiente certo.
-
-Passo 2: Atualizar os pacotes do Ubuntu no WSL
-
-No terminal do VS Code (que está no WSL):
-
-Bash
-
-sudo apt update
-sudo apt upgrade -y
-
-Passo 3: Instalar o curl (se ainda não tiver)
-
-Bash
-
-sudo apt install curl -y
-
-Passo 4: Instalar o NVM (Node Version Manager) no WSL
-
-Este é o passo crucial. Substitua v0.39.7 pela versão mais recente do NVM se houver uma mais nova (verifique no GitHub nvm-sh/nvm).
-
-Bash
-
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh
-
-Passo 5: Recarregar o ambiente do shell no WSL
-
-Após a instalação do NVM, o script tenta modificar seu arquivo de configuração de shell (.bashrc ou .zshrc). Para que essas mudanças sejam aplicadas ao seu terminal atual, você precisa recarregá-lo.
-
-Você pode fechar o terminal atual no VS Code e abrir um novo, ou executar o comando:
-
-Bash
-
-source ~/.bashrc
-
-Passo 6: Verificar a instalação do NVM
-
-No novo terminal do VS Code (ou após o source):
-
-Bash
-
-command -v nvm
-Você deve ver nvm como saída.
-
-Passo 7: Instalar o Node.js usando NVM no WSL
-
-Agora que o NVM está funcionando, instale a versão do Node.js que seu projeto front-end exige. A versão LTS é geralmente a mais segura e recomendada para a maioria dos projetos.
-
-Bash
-
-nvm install --lts
-
-Passo 8: Definir a versão do Node.js a ser usada (se você instalou várias ou quer garantir)
-
-Bash
-
-nvm use --lts # Para usar a versão LTS
-
-pip install -U flask-openapi3[swagger,redoc,rapidoc,rapipdf,scalar,elements]
-
-
-
-
-
-
-
-É fortemente indicado o uso de ambientes virtuais do tipo virtualenv.
-
-(env)$ pip install -r requirements.txt
-Este comando instala as dependências/bibliotecas, descritas no arquivo requirements.txt.
-
-Para executar a API basta executar:
-
-(env)$ flask run --host 0.0.0.0 --port 5000
-Em modo de desenvolvimento é recomendado executar utilizando o parâmetro reload, que reiniciará o servidor automaticamente após uma mudança no código fonte.
-
-(env)$ flask run --host 0.0.0.0 --port 5000 --reload
-Abra o http://localhost:5000/#/ no navegador para verificar o status da API em execução.
+Como executar a API
+Instalar Python
+Instalar Visual Studio Code (ou outra ferramenta conveniente)
+Utilizar terminal Linux (wsl ubuntu)
+Abrir VS Code e clonar o seguinte repositório: 
+Abrir docs em um terminal integrado e executar os seguintes comandos:
+Criar ambiente virtual: python3 -m venv venv_api
+Ativar ambiente virtual: source venv_api/bin/activate
+Atualizar os pacotes do Ubuntu no WSL
+$ sudo apt update
+$ sudo apt upgrade -y
+Instalar o curl (se ainda não tiver)
+$ sudo apt install curl -y
+Instalar o NVM (Node Version Manager) no WSL
+$ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh
+Recarregar o ambiente do shell no WSL
+$ source ~/.bashrc
+Verificar a instalação do NVM
+$ command -v nvm
+Instalar o Node.js usando NVM no WSL
+$ nvm install --lts
+Definir a versão do Node.js a ser usada
+$ nvm use --lts
+Instalar um UI
+$ pip install -U flask-openapi3[swagger,redoc,rapidoc,rapipdf,scalar,elements]
+Instalar os requisitos: pip install -r requirements.txt
+Executar a API: flask run --host 0.0.0.0 --port 5000
+Acessar API por meio do endereço http://localhost:5000/#/
